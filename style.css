@@ -43,13 +43,23 @@ p{
     font-size: 0.85rem;
     /* margin-left: 15px; */
 }
-.add-secondary{
-    font-size: 1rem;
-    /* margin-left: 3px; */
+.add-secondary {
+  font-size: 1rem;
+  font-weight: 700;
 }
-.nav-address{
+.nav-address a{
     display: flex;
     align-items: center;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    &:hover{
+      border: 1.5px solid #fff;
+  }
+}
+.nav-address a i {
+  font-size: 18px;
+  margin-right: 3px;
 }
 .add-text{
     margin-left: 5px;
@@ -102,6 +112,30 @@ p{
   }
 
 
+  /* carousel */
+  .carousel-slider .owl-dots {
+    display: none;
+  }
+  .owl-carousel .owl-nav button.owl-prev span,
+  .owl-carousel .owl-nav button.owl-next span {
+    color: #fff;
+    font-size: 90px;
+    line-height: 35px;
+  }
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 70px;
+  }
+  .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+  }
+  .owl-carousel .owl-nav button.owl-next{
+  right: 0;
+  }
+
   /* box 4 */
 .nav-signin,
 .nav-returns{
@@ -128,13 +162,17 @@ p{
     display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 8px 0;
   }
   .panel .offcanvas-header {
     background: #232f3e;
   }
   .navbar{
-    padding: 0;
+    padding: 12px 11px;
+    border: 1.5px solid transparent;
+
+    &:hover{
+      border: 1.5px solid #fff;
+    }
   }
   .navbar-toggler {
     border: none;
@@ -160,7 +198,7 @@ p{
     text-decoration: none;
     color: #fff;
     font-size: 0.9rem;
-    padding: 8px;
+    padding: 10px 8px;
 
     &:hover{
       border: 1.5px solid #fff;
@@ -205,9 +243,15 @@ section.hero-section .hero-message a{
 
 
   section.categories {
-    background: #e3e6e6;
+    background: transparent;
     padding: 0 8px;
   }
+  .categories.categories-section1 {
+    margin-top: -330px;
+    position: relative;
+    z-index: 2;
+  }
+
   section.categories .col-md-3 {
     padding: 0px 8px;
   }
@@ -280,6 +324,7 @@ section.categories .see-more a {
 .personalized-recommendation {
   padding: 30px 0;
   background: #fff;
+  margin-top: 8px;
 }
 .perRec-body {
   display: flex;
@@ -428,4 +473,22 @@ section.categories .see-more a {
 .terms-rights .rights p {
   color: #ddd;
   font-size: 0.85rem;
+}
+
+
+/* developer */
+.developer {
+  background: #e3e6e6;
+  padding: 10px 0;
+}
+.developed-by p{
+  color: #000;
+  font-weight: 600;
+}
+.developed-by p a{
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
 }
