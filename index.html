@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+      /* .back-btn { cursor: pointer; color: #007bff; margin-bottom: 10px; display: inline-block; }
+      .back-btn:hover { text-decoration: underline; }
+      .hidden { display: none; } */
+  </style>
   </head>
   <body>
+    <div class="desktop-wrapper">
     <header>
       <div class="overlay"></div>
         <marquee behavior="scroll" direction="left">For Best Experience Use Desktop or Tablet devices.</marquee>
@@ -68,53 +74,59 @@
                     </div>
                     <p>All</p>
                   </button>
-                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
                     <div class="offcanvas-header">
-                      <a href="#" class="offcanvas-title" id="offcanvasNavbarLabel">
-                        Hello, sign in
-                      </a>
-                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                          <h4 class="nav-link active" aria-current="page">Digital Content & Devices</h4>
-                            <li class="nav-item">
-                          <a class="nav-link" href="#">Prime Video</a>
-                        </li>
-                          <li class="nav-item">
-                          <a class="nav-link" href="#">Amazon Music</a>
-                        </li>
-                          <hr class="dropdown-divider">
-                          <h4 class="nav-link active" aria-current="page">Shop by Department</h4>
-                            <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                          <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                          <hr class="dropdown-divider">
-                          <h4 class="nav-link active" aria-current="page">Programs and Features</h4>
-                            <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                          <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                          <hr class="dropdown-divider">
-                          <h4 class="nav-link active" aria-current="page">Help and Settings</h4>
-                            <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                          <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                    </div>
+                      <a href="#" class="offcanvas-title"><i class="fa-solid fa-user"></i>Hello, sign in</a>
+                      <button type="button" class="btn navbar-cancel" data-bs-dismiss="offcanvas"><i class="fa-solid fa-xmark"></i></button>
                   </div>
+                    <div class="offcanvas-body" id="offcanvasContent">
+                      <ul class="navbar-nav">
+                        <li class="nav-link"><h5>Heading 1</h5></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('primeVideo')">Prime Video</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonMusic')">Amazon Music</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('books')">Kindle E-readers and Books</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonAppstore')">Amazon Appstore</button></li>
+                        
+                        <!-- Hidden Items -->
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('electronics')">Electronics</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('fashion')">Fashion</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('giftCards')">Gift Cards</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('customerService')">Customer Service</button></li>
+                        <button id="toggleBtn" class="btn btn-link" onclick="toggleMenu()">Show More</button>
+
+                    </ul>
+                    <hr>
+                      <ul class="navbar-nav">
+                        <li class="nav-link"><h5>Heading 2</h5></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('primeVideo')">Prime Video</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonMusic')">Amazon Music</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('books')">Kindle E-readers and Books</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonAppstore')">Amazon Appstore</button></li>
+                        
+                        <!-- Hidden Items -->
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('electronics')">Electronics</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('fashion')">Fashion</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('giftCards')">Gift Cards</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('customerService')">Customer Service</button></li>
+                        <button id="toggleBtn" class="btn btn-link" onclick="toggleMenu()">Show More</button>
+                    </ul>
+                    <hr>
+                      <ul class="navbar-nav">
+                        <li class="nav-link"><h5>Heading 3</h5></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('primeVideo')">Prime Video</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonMusic')">Amazon Music</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('books')">Kindle E-readers and Books</button></li>
+                        <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonAppstore')">Amazon Appstore</button></li>
+                        
+                        <!-- Hidden Items -->
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('electronics')">Electronics</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('fashion')">Fashion</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('giftCards')">Gift Cards</button></li>
+                        <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('customerService')">Customer Service</button></li>
+                        <button id="toggleBtn" class="btn btn-link" onclick="toggleMenu()">Show More</button>
+                    </ul>
+                    </div>
+                </div>
               </nav>
         </div>
         <div class="panel-ops">
@@ -128,14 +140,155 @@
             <a href="#">Shop deals in Electronics</a>
         </div>
     </section>
+  </div>
+
+    <div class="mobile-wrapper">
+    <section class="navbar-mobile container-fluid">
+      <div class="navbar-logo-wrapper">
+            <div class="nbar-mobile">
+              <nav class="navbar">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobile" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                      <div class="toggler-wrapper">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                    </button>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarMobile">
+                      <div class="offcanvas-header">
+                          <a href="#" class="offcanvas-title"><i class="fa-solid fa-user"></i>Hello, sign in</a>
+                          <button type="button" class="btn navbar-cancel" data-bs-dismiss="offcanvas"><i class="fa-solid fa-xmark"></i></button>
+                      </div>
+                      <div class="offcanvas-body" id="offcanvasContent">
+                        <ul class="navbar-nav">
+                          <li class="nav-link"><h5>Heading 1</h5></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('primeVideo')">Prime Video</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonMusic')">Amazon Music</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('books')">Kindle E-readers and Books</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonAppstore')">Amazon Appstore</button></li>
+                          
+                          <!-- Hidden Items -->
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('electronics')">Electronics</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('fashion')">Fashion</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('giftCards')">Gift Cards</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('customerService')">Customer Service</button></li>
+                          <button id="toggleBtn" class="btn btn-link" onclick="toggleMenu()">Show More</button>
+  
+                      </ul>
+                      <hr>
+                        <ul class="navbar-nav">
+                          <li class="nav-link"><h5>Heading 2</h5></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('primeVideo')">Prime Video</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonMusic')">Amazon Music</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('books')">Kindle E-readers and Books</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonAppstore')">Amazon Appstore</button></li>
+                          
+                          <!-- Hidden Items -->
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('electronics')">Electronics</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('fashion')">Fashion</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('giftCards')">Gift Cards</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('customerService')">Customer Service</button></li>
+                          <button id="toggleBtn" class="btn btn-link" onclick="toggleMenu()">Show More</button>
+                      </ul>
+                      <hr>
+                        <ul class="navbar-nav">
+                          <li class="nav-link"><h5>Heading 3</h5></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('primeVideo')">Prime Video</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonMusic')">Amazon Music</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('books')">Kindle E-readers and Books</button></li>
+                          <li class="nav-item"><button class="nav-link btn btn-link" onclick="loadMenu('amazonAppstore')">Amazon Appstore</button></li>
+                          
+                          <!-- Hidden Items -->
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('electronics')">Electronics</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('fashion')">Fashion</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('giftCards')">Gift Cards</button></li>
+                          <li class="nav-item hidden"><button class="nav-link btn btn-link" onclick="loadMenu('customerService')">Customer Service</button></li>
+                          <button id="toggleBtn" class="btn btn-link" onclick="toggleMenu()">Show More</button>
+                      </ul>
+                      </div>
+                  </div>
+                </nav>
+          </div>
+          <div class="logo-mobile">
+            <img src="images/amazon_logo.png" alt="logo" class="img-fluid">
+          </div>
+        </div>
+        <div class="signin-cart-wrapper">
+          <div class="signin">
+            <a href="#">
+              Sign in ><i class="fa-regular fa-user"></i>
+            </a>
+          </div>
+          <div class="cart">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+    </section>
+    <div class="search-mobile container-fluid">
+      <div class="nav-search">
+        <input class="form-control" type="search" placeholder="Search Amazon">
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    </div>
+<section class="panel-mobile">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="wrapper">
+          <ul>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Amazon Basics</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Livestreams</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">New Release</a></li>
+            <li><a href="#">PC</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">New Release</a></li>
+            <li><a href="#">PC</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="delivery-location">
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-location-dot"></i>Deliver to Nepal</button>
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <button type="button" class="btn location-done" data-bs-dismiss="offcanvas" aria-label="Close">Done</button>
+  </div>
+  <div class="offcanvas-body small">
+    <h5>Choose your location</h5>
+    <p>Delivery options and delivery speeds may vary for different locations</p>
+    <a class="btn signin-button" href="#">Sign in to see your addresses</a>
+    <hr>
+    <div class="zipcode">
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-location-dot"></i>Enter a US zip code</a></li>
+          <li><a href="#"><i class="fa-solid fa-globe"></i>Ship outside the US</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 
     <!-- <section class="hero-section">
         <div class="hero-message">
             <p>You are on <a href="#">amazon.com</a>. You can also shop on Amazon Nepal for millions of products with fast local delivery. <a href="#">Click here to go to amazon.np</a></p>
         </div>
     </section> -->
-    <section class="carousel-slider">
-      <div class="owl-carousel owl-theme">
+    <section class="carousel-slider large-devices">
+      <div class="owl-carousel carousel-large owl-theme">
         <div class="item">
           <img src="images/carousel/1.jpg" alt="carousel" class="img-fluid">
         </div>
@@ -153,13 +306,104 @@
         </div>
     </div>
     </section>
+    <section class="carousel-slider small-devices">
+      <div class="owl-carousel carousel-small  owl-theme">
+        <div class="item">
+          <img src="images/Slider-phone/1.jpg" alt="carousel" class="img-fluid">
+        </div>
+        <div class="item">
+          <img src="images/Slider-phone/2.jpg" alt="carousel" class="img-fluid">
+        </div>
+        <div class="item">
+          <img src="images/Slider-phone/3.jpg" alt="carousel" class="img-fluid">
+        </div>
+        <div class="item">
+          <img src="images/Slider-phone/4.jpg" alt="carousel" class="img-fluid">
+        </div>
+        <div class="item">
+          <img src="images/Slider-phone/5.jpg" alt="carousel" class="img-fluid">
+        </div>
+    </div>
+    </section>
+<section class="preview-slider container-fluid">
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/1.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/2.jpeg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/3.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/4.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/5.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/6.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/7.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/8.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/9.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="#">
+      <div class="image-wrapper">
+        <img src="images/small-preview/10.jpg" alt="slider" class="img-fluid">
+      </div>
+    </a>
+  </div>
 
+</section>
     <section class="categories categories-section1">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row rr">
 
           <!-- card 1 -->
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card">
               <div class="title">
                 <h3>
@@ -176,7 +420,7 @@
           </div>
 
           <!-- card 2 -->
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card">
               <div class="title">
                 <h3>
@@ -216,7 +460,7 @@
           </div>
 
           <!-- card 3 -->
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card">
               <div class="title">
                 <h3>
@@ -233,7 +477,7 @@
           </div>
 
           <!-- card 4 -->
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card">
               <div class="title">
                 <h3>
@@ -273,7 +517,7 @@
           </div>
 
           <!-- card 5 -->
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card">
               <div class="title">
                 <h3>Shop deals in Fashion</h3>
@@ -311,7 +555,7 @@
           </div>
 
           <!-- card 6 -->
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card">
               <div class="title">
                 <h3>Top categories in Kitchen appliances</h3>
@@ -349,7 +593,7 @@
           </div>
 
           <!-- card 7 -->
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card">
               <div class="title">
                 <h3>New home arrivals under $50</h3>
@@ -387,7 +631,7 @@
           </div>
 
           <!-- card 8 -->
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card">
               <div class="title">
                 <h3>Refresh your space</h3>
@@ -556,9 +800,9 @@
 <!-- category section 2 starts -->
 <section class="categories categories-section2">
   <div class="container-fluid">
-    <div class="row">
+    <div class="row rr">
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Toys for all ages</h3>
@@ -595,7 +839,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Wireless Tech</h3>
@@ -632,7 +876,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Gaming merchandise</h3>
@@ -669,7 +913,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Score the top PCs & Accessories</h3>
@@ -849,9 +1093,9 @@
 <!-- category section 3 -->
 <section class="categories categories-section3">
   <div class="container-fluid">
-    <div class="row">
+    <div class="row rr">
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Vacation Gateway</h3>
@@ -888,7 +1132,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Level up your gaming</h3>
@@ -925,7 +1169,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Most-loved travel essentials</h3>
@@ -962,7 +1206,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Fantastic Finds for Home</h3>
@@ -999,7 +1243,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Level up your beauty routine</h3>
@@ -1036,7 +1280,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Most-loved watches</h3>
@@ -1073,7 +1317,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Discover these beauty products for you</h3>
@@ -1110,7 +1354,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+          <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <div class="title">
             <h3>Upgrade on Tech</h3>
@@ -1155,7 +1399,6 @@
 
 <!-- personalize recommendations enabling section -->
     <section class="personalized-recommendation">
-      <div class="">
         <div class="row">
           <div class="col-md-12">
             <div class="perRec-body">
@@ -1165,7 +1408,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <section class="backtotop">
