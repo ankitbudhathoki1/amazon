@@ -68,6 +68,9 @@
     .carousel-slider.large-devices {
         display: none;
       }
+      .categories .rr {
+        flex-direction: column-reverse;
+      }
 }
 @media (max-width: 576px) {
 
